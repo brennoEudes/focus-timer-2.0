@@ -25,6 +25,12 @@ main {
   gap: 18rem;
 }
 
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
 .watch {
   display: flex;
   flex-direction: column;
@@ -42,11 +48,5 @@ main {
   .controllers {
     display: flex;
     gap: 4rem;
-
-    button {
-      appearance: none;
-      border: none;
-      background: none;
-    }
   }
 }

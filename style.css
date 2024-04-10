@@ -50,3 +50,9 @@ button {
     gap: 4rem;
   }
 }
+
+.music-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}

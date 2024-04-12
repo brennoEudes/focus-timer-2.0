@@ -3,17 +3,8 @@ import * as FocusTimer from "../src/FocusTimer/index.js"; // coloca tudo em obj 
 
 // // VARIÁVEIS
 // const timer = document.querySelector(".timer");
-// const playBtn = document.querySelector("#play-btn");
-// const stopBtn = document.querySelector("#stop-btn");
-// const addBtn = document.querySelector("#add-btn");
-// const removeBtn = document.querySelector("#remove-btn");
 
 // //console.log(removeBtn);
-
-// //EVENTOS
-// controllers.addEventListener("click", function () {
-//   console.log("btn clicked!");
-// });
 
 FocusTimer.start(0, 6);
 

@@ -45,7 +45,7 @@ button {
     font-weight: 500;
   }
 
-  .controllers {
+  .controls {
     display: flex;
     gap: 4rem;
   }

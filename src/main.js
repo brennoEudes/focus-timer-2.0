@@ -1,15 +1,22 @@
-// //AlTERAÇÃO DE ELEMENTOS
+import * as FocusTimer from "../src/FocusTimer/index.js"; // coloca tudo em obj e exporta
+// import { controllers } from "./controllers.js";
 
-// const tituloSessao = document.querySelector('section h3'); // refere-se somente ao h3 dentro da section!
+// // VARIÁVEIS
+// const timer = document.querySelector(".timer");
+// const playBtn = document.querySelector("#play-btn");
+// const stopBtn = document.querySelector("#stop-btn");
+// const addBtn = document.querySelector("#add-btn");
+// const removeBtn = document.querySelector("#remove-btn");
 
-// tituloSessao.setAttribute("id", "titulo-sessao"); // É uma função que espera dois valores, sendo o 1º o atributo a ser definido e o 2º o novo valor!
-// tituloSessao.classList.add("font-grande");
+// //console.log(removeBtn);
 
-// // Checando as info de classList:
-// // console.log(tituloSessao.classList.contains('font-negrito')); // true ( Ou seja, a font-negrito está dentro da classList de h3!)
+// //EVENTOS
+// controllers.addEventListener("click", function () {
+//   console.log("btn clicked!");
+// });
 
-// tituloSessao.classList.toggle('font-grande'); // pegando e excluíndo o elemento da classList
+//
 
-// tituloSessao.textContent = 'Título alterado via JavaScript'; // Alterando título via JS!
-// console.log(tituloSessao);
-console.log("Hello, World!");       
+FocusTimer.start(0, 6);
+
+console.log(FocusTimer);

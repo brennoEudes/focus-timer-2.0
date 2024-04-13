@@ -45,13 +45,13 @@ button {
     font-weight: 500;
   }
 
-  .controls {
+  .timer-controls {
     display: flex;
     gap: 4rem;
   }
 }
 
-.music-buttons {
+.music-controls {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.2rem;

@@ -1,7 +1,7 @@
 import state from "./state.js";
 
 export function toogleRunning() {
-  state.isRunning = document.documentElement.classList.toogle("running");
+  state.isRunning = document.documentElement.classList.toggle("running");
 }
 
 export function reset() {
@@ -14,5 +14,5 @@ export function set() {
 }
 
 export function toogleMusic() {
-  state.isMute = document.documentElement.classList.toogle("music-on");
+  state.isMute = document.documentElement.classList.toggle("music-on");
 }

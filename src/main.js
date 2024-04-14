@@ -6,6 +6,6 @@ import * as FocusTimer from "../src/FocusTimer/index.js"; // coloca tudo em obj 
 
 // //console.log(removeBtn);
 
-FocusTimer.start(0, 6);
+FocusTimer.start(1, 6);
 
 //console.log(FocusTimer);

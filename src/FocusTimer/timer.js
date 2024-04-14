@@ -1,11 +1,29 @@
 import state from "./state.js";
 import * as el from "./controls.js";
+import { reset } from "./action.js";
 
 export function countdown() {
   if (!state.isRunning) {
     return;
   }
   console.log("Iniciou!");
+
+  let minutes = Number(el.minutes.textContent);
+  let seconds = Number(el.seconds.textContent);
+
+  seconds--;
+
+  if (seconds < 0) {
+    seconds = 59;
+    minutes--;
+  }
+
+  if (minutes < 0) {
+    reset();
+    return;
+  }
+
+  updateDisplay(minutes, seconds);
 
   setTimeout(() => {
     countdown(), 1000;

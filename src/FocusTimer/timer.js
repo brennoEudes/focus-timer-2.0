@@ -1,5 +1,16 @@
 import state from "./state.js";
-import * as el from "./controls.js"
+import * as el from "./controls.js";
+
+export function countdown() {
+  if (!state.isRunning) {
+    return;
+  }
+  console.log("Iniciou!");
+
+  setTimeout(() => {
+    countdown(), 1000;
+  });
+}
 
 export function updateDisplay(minutes, seconds) {
   minutes = minutes ?? state.minutes;

@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Focus Timer 2.0</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet"
-  />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="./style.css" />
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <script src="./src/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./src/main.js" type="module" defer></script>
   </head>
   <body>
     <main>
@@ -24,32 +24,45 @@
           <span id="seconds">00</span>
         </div>
         <div class="timer-controls">
-          <button id="play-btn" data-action="toogleRunning">PLAY
-            <img src="./assets/play.svg" alt="play button" />
-          </button>
-          <button id="stop-btn" data-action="toogleRunning">
-            <img src="./assets/stop.svg" alt="stop button" />
-          </button>
-          <button id="add-btn" data-action="set">
-            <img src="./assets/+.svg" alt="add button" />
-          </button>
-          <button id="remove-btn" data-action="set">
-            <img src="./assets/-.svg" alt="remove button" />
-          </button>
+          <button
+            id="play-btn"
+            data-action="toogleRunning"
+            class="ph ph-play-circle"
+          ></button>
+          <button
+            id="stop-btn"
+            data-action="toogleRunning"
+            class="ph ph-stop-circle secondary"
+          ></button>
+          <button
+            id="add-btn"
+            data-action="set"
+            class="ph ph-plus-circle"
+          ></button>
+          <button
+            id="remove-btn"
+            data-action="set"
+            class="ph ph-minus-circle"
+          ></button>
         </div>
       </div>
       <div class="music-controls">
-        <button id="forest-sound-btn" data-action="toogleMusic">FOREST
-          <img src="./assets/Card 01.svg" alt="forest sound button" />
-        </button>
-        <button id="rain-sound-btn" data-action="toogleMusic">
-          <img src="./assets/Card 02.svg" alt="rain sound button" />
-        </button>
-        <button id="coffee-sound-btn" data-action="toogleMusic">
-          <img src="./assets/Card 03.svg" alt="coffee sound button" />
-        </button>
-        <button id="fireplace-sound-btn" data-action="toogleMusic">
-          <img src="./assets/Card 04.svg" alt="fireplace sound button" />
+        <button
+          id="forest-sound-btn"
+          data-action="toogleMusic"
+          class="ph ph-tree"
+        ></button>
+        <button
+          id="rain-sound-btn"
+          data-action="toogleMusic"
+          class="ph ph-cloud-rain"
+        ></button>
+        <button
+          id="coffee-sound-btn"
+          data-action="toogleMusic"
+          class="ph ph-storefront"
+        ></button>
+        <button id="fireplace-sound-btn" data-action="toogleMusic" class="ph ph-campfire">
         </button>
       </div>
     </main>

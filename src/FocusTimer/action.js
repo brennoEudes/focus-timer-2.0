@@ -1,5 +1,12 @@
+import state from "./state.js";
+
 export function toogleRunning() {
-  console.log("ToogleRunning function!");
+  state.isRunning = document.documentElement.classList.toogle("running");
+}
+
+export function reset() {
+  state.isRunning = false;
+  document.documentElement.classList.remove("running");
 }
 
 export function set() {
@@ -7,5 +14,5 @@ export function set() {
 }
 
 export function toogleMusic() {
-    console.log("ToogleMusic function!");
-  }
+  state.isMute = document.documentElement.classList.toogle("music-on");
+}

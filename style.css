@@ -51,6 +51,12 @@ button {
   }
 }
 
+.running .ph-play-circle,
+/* pseudo class (html:not = o html não possui... */
+html:not(.running) .ph-pause-circle {
+  display: none;
+}
+
 .music-controls {
   display: grid;
   grid-template-columns: 1fr 1fr;

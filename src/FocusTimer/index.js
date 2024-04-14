@@ -11,4 +11,6 @@ export function start(minutes, seconds) {
 
   events.timer();
   events.music();
+
+  events.setMinutes();
 }

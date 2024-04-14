@@ -1,5 +1,6 @@
 import state from "./state.js";
 import * as timer from "./timer.js";
+import * as el  from "./controls.js";
 
 export function toogleRunning() {
   state.isRunning = document.documentElement.classList.toggle("running");
@@ -14,7 +15,8 @@ export function reset() {
 }
 
 export function set() {
-  console.log("set!");
+  el.minutes.setAttribute("contenteditable", true);
+  el.minutes.focus()
 }
 
 export function toogleMusic() {

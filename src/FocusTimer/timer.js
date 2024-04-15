@@ -29,9 +29,26 @@ export function countdown() {
 
   updateDisplay(minutes, seconds);
 
-  state.countdownId = setTimeout(() => {
-    countdown(), 1000;
-  });
+  state.countdownId = setTimeout(() => countdown(), 1000);
+}
+
+export function plus() {
+  let minutes = Number(el.minutes.textContent);
+  let seconds = Number(el.seconds.textContent);
+
+  minutes += 5;
+  updateDisplay(minutes, seconds);
+}
+
+export function minus() {
+  let minutes = Number(el.minutes.textContent);
+  let seconds = Number(el.seconds.textContent);
+
+  minutes -= 5;
+  if (minutes < 0) {
+    return;
+  }
+  updateDisplay(minutes, seconds);
 }
 
 export function updateDisplay(minutes, seconds) {

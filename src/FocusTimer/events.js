@@ -17,6 +17,25 @@ export function timer() {
   });
 }
 
+// Evento de edição minutos (não necessário neste exercício)
+// export function setMinutes() {
+//   el.minutes.addEventListener("focus", () => {
+//     el.minutes.textContent = "";
+//   });
+
+//   el.minutes.onkeypress = (event) => /\d/.test(event.key);
+//   el.minutes.addEventListener("blur",(event) => {
+//     let time = event.currentTarget.textContent
+//     time = time > 60 ? 60 : time;
+//     state.minutes = time;
+//     state.seconds = 0;
+
+//     updateDisplay();
+//     el.minutes.removeAttribute("contenteditable");
+
+//   });
+// }
+
 export function music() {
   musicControls.addEventListener("click", (event) => {
     const action = event.target.dataset.action; // target indica o elemento q está sendo clicado // dataset se conecta c/ data no html.
@@ -25,23 +44,5 @@ export function music() {
       return;
     }
     actions[action]();
-  });
-}
-
-export function setMinutes() {
-  el.minutes.addEventListener("focus", () => {
-    el.minutes.textContent = "";
-  });
-
-  el.minutes.onkeypress = (event) => /\d/.test(event.key);
-  el.minutes.addEventListener("blur",(event) => {
-    let time = event.currentTarget.textContent
-    time = time > 60 ? 60 : time;
-    state.minutes = time;
-    state.seconds = 0;
-
-    updateDisplay();
-    el.minutes.removeAttribute("contenteditable");
-
   });
 }

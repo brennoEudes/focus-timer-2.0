@@ -3,8 +3,8 @@ import * as timer from "./timer.js";
 import * as el from "./controls.js";
 import * as sounds from "./sounds.js";
 
-export function toogleRunning() {
-  state.isRunning = document.documentElement.classList.toggle("running");
+export function toggleRunning() {
+  state.isRunning = document.documentElement.classList.toggle('running');
 
   timer.countdown();
   sounds.buttonPressAudio.play();
@@ -17,9 +17,19 @@ export function reset() {
   sounds.buttonPressAudio.play();
 }
 
-export function set() {
-  el.minutes.setAttribute("contenteditable", true);
-  el.minutes.focus();
+// Edição minutos (não necessário neste exercício)
+// export function set() {
+//   el.minutes.setAttribute("contenteditable", true);
+//   el.minutes.focus();
+//   sounds.buttonPressAudio.play();
+// }
+
+export function increase5Minutes() {
+  timer.plus();
+  sounds.buttonPressAudio.play();
+}
+export function decrease5Minutes() {
+  timer.minus()
   sounds.buttonPressAudio.play();
 }
 

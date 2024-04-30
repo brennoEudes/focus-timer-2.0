@@ -61,4 +61,21 @@ html:not(.running) #pause-btn {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.2rem;
+
+  button {
+    background-color: #e1e1e6;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 1rem;
+
+    transition: background-color 0.5s;
+  }
+}
+
+.ph {
+  font-size: 5rem;
+}
+
+.music-controls button:hover {
+  background-color: #02799d;
 }

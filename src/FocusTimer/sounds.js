@@ -6,6 +6,13 @@ export const rainAudio = new Audio("../../assets/Chuva.wav");
 export const coffeeAudio = new Audio("../../assets/Cafeteria.wav");
 export const fireplaceAudio = new Audio("../../assets/Lareira.wav");
 
+// export const audioPaths = {
+//     forest: "../../assets/Floresta.wav",
+//     rain: "../../assets/Chuva.wav",
+//     coffee: "../../assets/Cafeteria.wav",
+//     campfire: "../../assets/Lareira.wav"
+// };
+
 forestAudio.loop = true;
 rainAudio.loop = true;
 coffeeAudio.loop = true;

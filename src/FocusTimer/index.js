@@ -10,6 +10,4 @@ export function start(minutes, seconds) {
   timer.updateDisplay();
 
   events.timer();
-  events.music();
-  
 }

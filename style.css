@@ -78,4 +78,5 @@ html:not(.running) #pause-btn {
 
 .music-controls button:hover {
   background-color: #02799d;
+  color: white;
 }

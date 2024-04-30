@@ -35,6 +35,7 @@ export function decrease5Minutes() {
 
 el.forestButton.addEventListener("click", () => {
   state.isMute = document.documentElement.classList.toggle("music-on");
+  el.forestButton.classList.toggle("selected");
 
   if (state.isMute) {
     sounds.forestAudio.play();
@@ -45,6 +46,7 @@ el.forestButton.addEventListener("click", () => {
 
 el.rainButton.addEventListener("click", () => {
   state.isMute = document.documentElement.classList.toggle("music-on");
+  el.rainButton.classList.toggle("selected");
 
   if (state.isMute) {
     sounds.rainAudio.play();
@@ -55,6 +57,7 @@ el.rainButton.addEventListener("click", () => {
 
 el.coffeeButton.addEventListener("click", () => {
   state.isMute = document.documentElement.classList.toggle("music-on");
+  el.coffeeButton.classList.toggle("selected");
 
   if (state.isMute) {
     sounds.coffeeAudio.play();
@@ -65,6 +68,7 @@ el.coffeeButton.addEventListener("click", () => {
 
 el.fireplaceButton.addEventListener("click", () => {
   state.isMute = document.documentElement.classList.toggle("music-on");
+  el.fireplaceButton.classList.toggle("selected");
 
   if (state.isMute) {
     sounds.fireplaceAudio.play();

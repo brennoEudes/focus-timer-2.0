@@ -35,7 +35,6 @@ button {
   display: flex;
   flex-direction: column;
 
-
   align-items: center;
 
   .timer {
@@ -78,5 +77,10 @@ html:not(.running) #pause-btn {
 
 .music-controls button:hover {
   background-color: #02799d;
+  color: white;
+}
+
+.music-controls button.selected {
+  background-color: #5daec6;
   color: white;
 }

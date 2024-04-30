@@ -1,6 +1,7 @@
 import state from "./state.js";
 import { timerControls, musicControls } from "./controls.js";
 import * as actions from "./action.js";
+// import { toggleMusic } from './action.js';
 import * as el from "./controls.js";
 import { updateDisplay } from "./timer.js";
 
@@ -36,13 +37,20 @@ export function timer() {
 //   });
 // }
 
-export function music() {
-  musicControls.addEventListener("click", (event) => {
-    const action = event.target.dataset.action; // target indica o elemento q está sendo clicado // dataset se conecta c/ data no html.
+// export function music() {
+//   musicControls.addEventListener("click", (event) => {
+//     const action = event.target.dataset.action; // target indica o elemento q está sendo clicado // dataset se conecta c/ data no html.
 
-    if (typeof actions[action] !== "function") {
-      return;
-    }
-    actions[action]();
+//     if (typeof actions[action] !== "function") {
+//       return;
+//     }
+//     actions[action]();
+//   });
+// }
+
+document.querySelectorAll('.music-controls button').forEach(btn => {
+  btn.addEventListener('click', function() {
+      const soundId = this.dataset.soundId;
+      // toggleMusic(soundId);
   });
-}
+});

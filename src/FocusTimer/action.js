@@ -34,45 +34,42 @@ export function decrease5Minutes() {
 }
 
 el.forestButton.addEventListener("click", () => {
-  state.isMute = document.documentElement.classList.toggle("music-on");
-  el.forestButton.classList.toggle("selected");
-
-  if (state.isMute) {
-    sounds.forestAudio.play();
-    return;
-  }
-  sounds.forestAudio.pause();
+  toggleSound(el.forestButton, sounds.forestAudio);
 });
 
 el.rainButton.addEventListener("click", () => {
-  state.isMute = document.documentElement.classList.toggle("music-on");
-  el.rainButton.classList.toggle("selected");
-
-  if (state.isMute) {
-    sounds.rainAudio.play();
-    return;
-  }
-  sounds.rainAudio.pause();
+  toggleSound(el.rainButton, sounds.rainAudio);
 });
 
 el.coffeeButton.addEventListener("click", () => {
-  state.isMute = document.documentElement.classList.toggle("music-on");
-  el.coffeeButton.classList.toggle("selected");
-
-  if (state.isMute) {
-    sounds.coffeeAudio.play();
-    return;
-  }
-  sounds.coffeeAudio.pause();
+  toggleSound(el.coffeeButton, sounds.coffeeAudio);
 });
 
 el.fireplaceButton.addEventListener("click", () => {
-  state.isMute = document.documentElement.classList.toggle("music-on");
-  el.fireplaceButton.classList.toggle("selected");
-
-  if (state.isMute) {
-    sounds.fireplaceAudio.play();
-    return;
-  }
-  sounds.fireplaceAudio.pause();
+  toggleSound(el.fireplaceButton, sounds.fireplaceAudio);
 });
+
+function toggleSound(button, audio) {
+  // Verifica se o áudio está pausado ou em reprodução
+  const isPaused = audio.paused;
+
+  // Pausa todos os sons e remove a classe 'selected' de todos os botões
+  const allButtons = document.querySelectorAll('.music-controls button');
+  allButtons.forEach(btn => {
+      btn.classList.remove('selected');
+  });
+  Object.values(sounds).forEach(sound => {
+      sound.pause();
+  });
+
+  // Alterna entre pausar e reproduzir o áudio
+  if (isPaused) {
+      // Toca o áudio e adiciona a classe 'selected' ao botão
+      audio.play();
+      button.classList.add('selected');
+  } else {
+      // Pausa o áudio e remove a classe 'selected' do botão
+      audio.pause();
+      button.classList.remove('selected');
+  }
+}

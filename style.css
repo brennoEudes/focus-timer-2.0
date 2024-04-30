@@ -34,7 +34,7 @@ button {
 .stopwatch {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+
 
   align-items: center;
 
@@ -47,7 +47,7 @@ button {
 
   .timer-controls {
     display: flex;
-    gap: 4rem;
+    gap: 5.8rem;
   }
 }
 
